@@ -11,13 +11,16 @@ interface AuthGuardLinkProps {
     className?: string
     children: React.ReactNode
     message?: string
+    onClick?: () => void
 }
 
-export function AuthGuardLink({ href, className, children, message }: AuthGuardLinkProps) {
+export function AuthGuardLink({ href, className, children, message, onClick }: AuthGuardLinkProps) {
     const { user } = useAuth()
     const router = useRouter()
 
     const handleClick = (e: React.MouseEvent) => {
+        if (onClick) onClick()
+
         if (!user) {
             e.preventDefault()
             toast.info(message || "Sign in required", {
