@@ -1,0 +1,3 @@
+// This file is just to check if the images exist or not. 
+// I will assume for now they don't and the browser will show alt text.
+// If the user wants real images, I can use the generate_image tool later.
