@@ -13,6 +13,9 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Rate The Courses",
   description: "Honest reviews from real students",
+  icons: {
+    icon: "/images/favicon.png",
+  },
 };
 
 import { Analytics } from '@vercel/analytics/react';
