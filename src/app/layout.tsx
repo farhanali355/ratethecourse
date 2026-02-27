@@ -11,9 +11,11 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Rate My Course",
+  title: "Rate The Courses",
   description: "Honest reviews from real students",
 };
+
+import { Analytics } from '@vercel/analytics/react';
 
 export default function RootLayout({
   children,
@@ -28,6 +30,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Analytics />
         <Toaster position="top-center" richColors />
       </body>
     </html>

@@ -9,7 +9,7 @@ export function CourseCard({ course }: { course: Course }) {
     return (
         <div className="flex flex-col bg-white rounded-xl border w-[100%] border-gray-200 shadow-[0_10px_30px_rgba(0,0,0,0.35)] overflow-hidden group">
             {/* Image Section */}
-            <Link href={`/courses/${course.id}`} className="relative aspect-[4/3] w-full overflow-hidden bg-gray-200 h-[180px] block">
+            <Link href={`/courses/${course.id}`} prefetch={true} className="relative aspect-[4/3] w-full overflow-hidden bg-gray-200 h-[180px] block">
                 <img
                     src={course.imageUrl}
                     alt={course.title}
@@ -25,7 +25,7 @@ export function CourseCard({ course }: { course: Course }) {
             {/* Content Section */}
             <div className="p-5 flex flex-col  flex-1 relative">
                 {/* Title */}
-                <Link href={`/courses/${course.id}`} className="font-bold text-[25px] leading-tight text-gray-900 group-hover:text-[#0088EE] transition-colors font-montserrat">
+                <Link href={`/courses/${course.id}`} prefetch={true} className="font-bold text-[25px] leading-tight text-gray-900 group-hover:text-[#0088EE] transition-colors font-montserrat">
                     {course.title}
                 </Link>
                 {/* Author Name */}

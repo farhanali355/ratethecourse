@@ -111,11 +111,17 @@ export async function resetPasswordWithResend(email: string, origin: string) {
     );
 
     try {
+        // Ensure origin is clean and has a protocol
+        const cleanOrigin = origin.replace(/\/$/, "");
+        const redirectUrl = cleanOrigin.startsWith('http')
+            ? `${cleanOrigin}/update-password`
+            : `https://${cleanOrigin}/update-password`;
+
         const { data, error } = await supabase.auth.admin.generateLink({
             type: 'recovery',
             email: email,
             options: {
-                redirectTo: `${origin}/update-password`
+                redirectTo: redirectUrl
             }
         });
 
