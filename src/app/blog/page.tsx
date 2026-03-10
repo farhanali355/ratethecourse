@@ -1,68 +1,59 @@
 import React from 'react'
-import Link from 'next/link'
-import { featuredPost, recentPosts, gridPosts } from '@/components/features/blog/BlogData'
-import { FeaturedPost } from '@/components/features/blog/FeaturedPost'
-import { RecentPostItem } from '@/components/features/blog/RecentPostItem'
-import { BlogCard } from '@/components/features/blog/BlogCard'
-import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
+import { featuredPosts, recentPosts } from '@/components/features/blog/BlogData'
+import { BlogFeaturedCard } from '@/components/features/blog/BlogFeaturedCard'
+import { BlogRecentCard } from '@/components/features/blog/BlogRecentCard'
+import { BlogSubscription } from '@/components/features/blog/BlogSubscription'
 
 export default function BlogPage() {
     return (
-        <main className="min-h-screen bg-white">
+        <main className="min-h-screen bg-white font-montserrat">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20">
 
-            <div className="max-w-7xl mx-auto px-6 md:px-12 py-8 md:py-12">
-
-                <Breadcrumbs />
-
-                <div className="mb-10">
-                    <h1 className="text-[38px] md:text-[40px] font-[700] text-black font-montserrat tracking-tight leading-none mb-4">
-                        Blog
-                    </h1>
-                </div>
-
-                {/* Top Section: Featured + Sidebar */}
-                <div className="grid grid-cols-1 lg:grid-cols-[2.2fr_1fr]  gap-x-12 gap-y-12 mb-16">
-
-                    {/* Featured Post */}
-                    <div>
-                        <FeaturedPost post={featuredPost} />
+                {/* Featured Blog Section */}
+                <div className="mb-20">
+                    <div className="flex items-center gap-4 mb-10">
+                        <h2 className="text-lg md:text-xl font-[500] text-gray-900 tracking-[0.1em] whitespace-nowrap">
+                            FEATURED BLOG
+                        </h2>
+                        <div className="h-px bg-gray-800 flex-1"></div>
                     </div>
 
-                    {/* Recently Published */}
-                    <div className='lg:ml-[-350px] lg:mt-[-50px] ml-0 mt-0'>
-
-                        <div className="flex flex-col">
-                            <h2 className="text-[24px] font-bold text-black font-montserrat mb-8 tracking-tight">
-                                Recently Published
-                            </h2>
-
-                            <div className="flex flex-col gap-8">
-                                {recentPosts.map(post => (
-                                    <RecentPostItem key={post.id} post={post} />
-                                ))}
-                            </div>
-                        </div>
+                    <div className="flex flex-col gap-8 md:gap-12">
+                        {featuredPosts.slice(0, 3).map(post => (
+                            <BlogFeaturedCard key={post.id} post={post} />
+                        ))}
                     </div>
-
                 </div>
 
+                {/* Recent Blog Section */}
+                <div className="mb-20">
+                    <div className="flex items-center gap-4 mb-10">
+                        <h2 className="text-lg md:text-xl font-[500] text-gray-900 tracking-[0.1em] whitespace-nowrap">
+                            RECENT BLOG
+                        </h2>
+                        <div className="h-px bg-gray-800 flex-1"></div>
+                    </div>
 
-                {/* Bottom Section: Grid of Posts */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {gridPosts.map(post => (
-                        <BlogCard key={post.id} post={post} />
-                    ))}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-12 md:gap-y-16">
+                        {recentPosts.map(post => (
+                            <BlogRecentCard key={post.id} post={post} />
+                        ))}
+                    </div>
                 </div>
 
                 {/* Load More Button */}
-                <div className="flex justify-center mt-16 mb-20">
-                    <button className="bg-[#0088EE] text-white tracking-wider font-[500] py-3 px-8 rounded-full hover:bg-blue-600 transition-colors shadow-md text-sm font-montserrat border border-black">
+                <div className="flex justify-center mt-8 mb-12">
+                    <button className="bg-[#0088EE] text-white font-[500] font-montserrat border border-black py-2 px-8 rounded-full hover:bg-blue-600 transition-all shadow-md active:scale-95 border border-[#0088EE]">
                         Load more blogs
                     </button>
                 </div>
 
             </div>
 
+            {/* Subscription Section */}
+            <div className="border-t border-gray-100 bg-[#FAFAFA]">
+                <BlogSubscription />
+            </div>
         </main>
     )
 }
