@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
         title: 'Grow AI Agency – Reviews, Insights & Real Results',
         description: 'The Grow AI Agency category focuses on programs, courses, and strategies designed to help individuals build and scale AI-powered service agencies.',
         category: 'COURSES',
-        date: 'Feb 12, 2026',
+        date: 'Feb/12/2026',
         imageUrl: '/images/blog-1.png',
         link: '#',
         author: {
@@ -35,7 +35,7 @@ export const blogPosts: BlogPost[] = [
         title: 'Acquisition Offers – Client Getting & Lead Generation Reviews',
         description: 'The Acquisition Offers category covers courses, systems, and frameworks that claim to help users acquire clients, generate leads, and increase sales.',
         category: 'COURSES',
-        date: 'Sept 17, 2025',
+        date: 'Sept/17/2025',
         imageUrl: '/images/blog-2.png',
         link: '#',
         author: {
@@ -49,7 +49,7 @@ export const blogPosts: BlogPost[] = [
         title: 'High Ticket Inner Circle – Premium Program Reviews',
         description: 'The High Ticket Inner Circle category reviews premium coaching programs, masterminds, and mentorships that require a significant financial investment.',
         category: 'COURSES',
-        date: 'Mar 14, 2025',
+        date: 'Mar/14/2025',
         imageUrl: '/images/blog-3.png',
         link: '#',
         author: {
@@ -63,7 +63,7 @@ export const blogPosts: BlogPost[] = [
         title: 'Grow AI Agency – Reviews, Insights & Real Results',
         description: 'The AI category covers Artificial Intelligence courses, tools, and automation systems for beginners and professionals.',
         category: 'COURSES',
-        date: 'July 10, 2025',
+        date: 'July/10/2025',
         imageUrl: '/images/blog-4.png',
         link: '#',
         author: {

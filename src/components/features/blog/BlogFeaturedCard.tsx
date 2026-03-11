@@ -9,16 +9,16 @@ export function BlogFeaturedCard({ post }: { post: BlogPost }) {
     if (!post) return null;
 
     return (
-        <div className="bg-[#0088EE] rounded-[32px] p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center group transition-all hover:scale-[1.01] shadow-lg">
+        <div className="bg-[#0088EE] rounded-[32px] p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center group transition-all hover:scale-[1.01] [box-shadow:0_20px_50px_rgba(0,0,0,0.3)]">
             {/* Image Container */}
-            <div className="w-full md:w-[45%] aspect-[16/10] rounded-[24px] overflow-hidden bg-white/10 p-2">
-                <div className="w-full h-full rounded-[20px] overflow-hidden border-2 border-white/20">
+            <div className="w-full md:w-[45%] aspect-[16/10] rounded-[24px] overflow-hidden bg-[#0077EE] p-3 [box-shadow:inset_0_4px_12px_rgba(0,0,0,0.3)]">
+                <div className="w-full h-full rounded-[20px] overflow-hidden border-2 border-white/20 shadow-inner">
                     <img
                         src={post.imageUrl}
                         alt={post.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         onError={(e) => {
-                             (e.target as HTMLImageElement).src = 'https://placehold.co/600x400/png?text=Featured+Blog';
+                            (e.target as HTMLImageElement).src = 'https://placehold.co/600x400/png?text=Featured+Blog';
                         }}
                     />
                 </div>
