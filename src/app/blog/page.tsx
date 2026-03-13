@@ -14,7 +14,7 @@ export default function BlogPage() {
     };
 
     return (
-        <main className="min-h-screen bg-white font-montserrat">
+        <main className="min-h-screen font-montserrat" style={{ backgroundColor: '#0B1120' }}>
             <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20">
 
                 {/* Featured Blog Section */}
@@ -70,3 +70,4 @@ export default function BlogPage() {
         </main>
     )
 }
+

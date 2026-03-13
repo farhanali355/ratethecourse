@@ -6,10 +6,10 @@ import Link from 'next/link'
 export function BlogSubscription() {
     return (
         <div className="max-w-4xl mx-auto pt-10 pb-20 px-6 text-center">
-            <h2 className="text-[32px] md:text-[42px] font-[850] font-montserrat text-black mb-3">
+            <h2 className="text-[32px] md:text-[42px] font-[850] font-montserrat text-white mb-3">
                 Get the latest Updates
             </h2>
-            <p className="text-black max-w-[820px] font-[450] mx-auto mb-10 font-montserrat text-[20px] leading-relaxed">
+            <p className="text-white max-w-[820px] font-[450] mx-auto mb-10 font-montserrat text-[20px] leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius <br className="hidden md:block" /> enim in eros elementum tristique.
             </p>
 
@@ -27,7 +27,7 @@ export function BlogSubscription() {
                 </button>
             </form>
 
-            <p className="mt-8 text-[15px] text-black font-montserrat font-[450]">
+            <p className="mt-8 text-[15px] text-white font-montserrat font-[450]">
                 By clicking Subscribe Up you're confirming that you agree with our <Link href="/terms" className="text-[#0088EE] hover:underline">Terms and Conditions</Link>.
             </p>
         </div>
