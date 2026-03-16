@@ -47,7 +47,7 @@ export function BlogFeaturedCard({ post }: { post: BlogPost }) {
                     </div>
                     <div className="flex flex-col">
                         <span className="text-sm font-bold font-montserrat">{post.author.name}</span>
-                        <span className="text-xs text-white/80 font-montserrat">{post.date} • {post.readTime}</span>
+                        {/* <span className="text-xs text-white/80 font-montserrat">{post.date} • {post.readTime}</span> */}
                     </div>
                 </div>
             </div>

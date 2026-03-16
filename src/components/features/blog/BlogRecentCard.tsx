@@ -44,7 +44,7 @@ export function BlogRecentCard({ post }: { post: BlogPost }) {
                     </div>
                     <div className="flex flex-col">
                         <span className="text-sm font-bold font-montserrat">{post.author.name}</span>
-                        <span className="text-xs text-white/80 font-montserrat">{patch_date(post.date)}</span>
+                        {/* <span className="text-xs text-white/80 font-montserrat">{patch_date(post.date)}</span> */}
                     </div>
                 </div>
             </div>
