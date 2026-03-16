@@ -20,10 +20,10 @@ export default function BlogPage() {
                 {/* Featured Blog Section */}
                 <div className="mb-20">
                     <div className="flex items-center gap-4 mb-10">
-                        <h2 className="text-lg md:text-xl font-[550] text-gray-900 tracking-[0.1em] whitespace-nowrap">
+                        <h2 className="text-lg md:text-xl font-[450] text-white tracking-[0.1em] whitespace-nowrap">
                             FEATURED BLOG
                         </h2>
-                        <div className="h-px bg-gray-800 flex-1"></div>
+                        <div className="h-px bg-white flex-1"></div>
                     </div>
 
                     <div className="flex flex-col gap-8 md:gap-12">
@@ -36,10 +36,10 @@ export default function BlogPage() {
                 {/* Recent Blog Section */}
                 <div className="mb-20">
                     <div className="flex items-center gap-4 mb-10">
-                        <h2 className="text-lg md:text-xl font-[550] text-gray-900 tracking-[0.1em] whitespace-nowrap">
+                        <h2 className="text-lg md:text-xl font-[450] text-white tracking-[0.1em] whitespace-nowrap">
                             RECENT BLOG
                         </h2>
-                        <div className="h-px bg-gray-800 flex-1"></div>
+                        <div className="h-px bg-white flex-1"></div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-12 md:gap-y-16">
